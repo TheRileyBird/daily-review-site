@@ -39,29 +39,20 @@ const problems = [
         style="line-height: 1.1; letter-spacing: -0.02em;"
         class="text-4xl sm:text-5xl font-bold text-neutral-900"
       >
-        The Gap Between <em class="not-italic text-gold-550">Knowing</em> and Living
+        The Gap Between<br><em class="not-italic text-gold-550">Knowing</em> and Living
       </h2>
     </div>
 
-    <p class="text-center text-neutral-600 text-lg max-w-2xl mx-auto mb-16 leading-relaxed">
+    <p class="text-center text-neutral-600 text-lg max-w-2xl mx-auto mb-8">
       Every year, millions invest in books, courses, therapy, and coaching — and experience genuine breakthroughs.
-      Then life happens. The wisdom fades. This isn't a motivation problem. It isn't a discipline problem.
+      Then life happens. The wisdom fades. This isn't a motivation problem.
     </p>
-
-    <!-- Callout -->
-    <div class="max-w-2xl mx-auto mb-16">
-      <div class="bg-neutral-900 rounded-2xl px-8 py-7 text-center">
-        <p
-         
-          class="text-2xl sm:text-3xl font-bold text-white leading-snug"
-        >
-          It is a <span class="text-gold-500 italic">delivery</span> problem.
+        <p class="text-2xl sm:text-3xl font-bold text-neutral-900 leading-snug max-w-2xl mx-auto text-center">
+          It is a problem of <span class="text-gold-500">remembering</span>.
         </p>
-      </div>
-    </div>
 
     <!-- Problem cards -->
-    <div class="grid sm:grid-cols-2 gap-5">
+    <div class="grid sm:grid-cols-2 gap-5 mt-16">
       {problems.map((p, i) => (
         <div
           x-data="{ visible: false }"
@@ -74,7 +65,7 @@ const problems = [
             <svg class="w-5 h-5 text-gold-550" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" set:html={p.icon}/>
           </div>
           <h3 class="text-lg font-semibold text-neutral-900 mb-3">{p.title}</h3>
-          <p class="text-neutral-600 text-sm leading-relaxed">{p.body}</p>
+          <p class="text-neutral-600 text-sm">{p.body}</p>
         </div>
       ))}
     </div>

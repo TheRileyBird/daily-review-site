@@ -7,21 +7,18 @@ const testimonials = [
     quote: "I've tried journaling, meditation, every productivity app — nothing stuck. This is the first thing that actually changed how I show up for my kids every morning. The voice feels warm, not robotic. It's like having a coach who knows exactly what you need to hear.",
     name: "Michael T.",
     role: "Father of three, age 42",
-    initial: "M",
   },
   {
     stars: 5,
     quote: "I'm a senior exec under constant pressure. I wrote down what I believe about leadership and how I want to treat people — and now I hear it every morning before the chaos starts. The difference in my relationships at work has been real and noticeable.",
     name: "Sarah K.",
     role: "VP of Operations",
-    initial: "S",
   },
   {
     stars: 5,
     quote: "Went through a difficult divorce and was rebuilding who I wanted to be. Writing my own values into this app and hearing them read back every day was the one practice that kept me grounded. It grows with you — it's not static like a quote app.",
     name: "David R.",
     role: "Entrepreneur & father",
-    initial: "D",
   },
 ];
 ---
@@ -64,11 +61,8 @@ const testimonials = [
             ))}
           </div>
 
-          <!-- Quote mark -->
-          <div aria-hidden="true" class="text-6xl leading-none text-gold-300 -mb-3 -mt-1 select-none">"</div>
-
           <!-- Quote body -->
-          <p class="text-neutral-700 text-sm leading-relaxed flex-1 -mt-2">{t.quote}</p>
+          <p class="text-neutral-700 text-sm flex-1 -mt-2">{t.quote}</p>
 
           <!-- Attribution -->
           <div class="flex items-center gap-3 pt-3 border-t border-neutral-200">
