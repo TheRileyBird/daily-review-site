@@ -1,5 +1,6 @@
 ---
-// FinalCTA — dark section, bold download push
+import { Image } from 'astro:assets';
+import goldOwl from '../assets/images/Gold-Owl.png';
 ---
 
 <section class="relative bg-neutral-900 bg-dot-grid py-28 lg:py-36 overflow-hidden" id="download">
@@ -13,17 +14,18 @@
 
     <!-- Owl logo -->
     <div class="flex justify-center mb-8">
-      <img src="/images/owl-logo.svg" alt="" aria-hidden="true" class="w-16 h-16 drop-shadow-[0_4px_16px_rgba(197,160,89,.5)]"/>
+      <Image
+        src={goldOwl}
+        alt="Your Daily Wisdom"
+        class="h-20 w-auto drop-shadow-[0_4px_16px_rgba(197,160,89,.5)]"
+        quality={90}
+      />
     </div>
 
     <!-- Headline -->
-    <h2
-      style="font-family: var(--font-display); line-height: 1.08; letter-spacing: -0.02em;"
-      class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
-    >
-      You Already Have the Wisdom.
-      <br/>
-      <em class="not-italic text-gold-500">Start Living It.</em>
+    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-[1.06]">
+      You Already Have the Wisdom.<br/>
+      <span class="text-gold-500">Start Living It.</span>
     </h2>
 
     <p class="text-neutral-500 text-lg sm:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
@@ -53,7 +55,6 @@
         href="#"
         class="inline-flex items-center gap-3 bg-neutral-800/80 hover:bg-neutral-800 border border-neutral-700 active:scale-[.97] text-white font-semibold px-7 py-4 rounded-2xl transition-all duration-200 w-full sm:w-auto justify-center"
       >
-        <!-- Google Play icon (simplified) -->
         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
           <path d="M3 20.5v-17c0-.83 1-.98 1.44-.33l13 8.5c.38.25.38.91 0 1.16l-13 8.5C4 21.98 3 21.33 3 20.5z" opacity=".8"/>
         </svg>
@@ -71,12 +72,9 @@
 
     <!-- Core promise -->
     <div class="mt-16 pt-12 border-t border-neutral-800 max-w-2xl mx-auto">
-      <p
-        style="font-family: var(--font-display);"
-        class="text-xl sm:text-2xl text-neutral-300 italic leading-relaxed"
-      >
+      <p class="text-xl sm:text-2xl text-neutral-400 leading-relaxed font-light italic">
         "You already have the wisdom to change your life.
-        <span class="text-gold-500">Your Daily Wisdom makes sure you never forget it.</span>"
+        <span class="text-gold-500 not-italic font-medium">Your Daily Wisdom makes sure you never forget it.</span>"
       </p>
     </div>
 

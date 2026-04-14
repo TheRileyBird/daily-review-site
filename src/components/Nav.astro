@@ -1,5 +1,6 @@
 ---
-// Nav — fixed, transparent on top → near-black/blur on scroll
+import { Image } from 'astro:assets';
+import goldOwl from '../assets/images/Gold-Owl.png';
 ---
 
 <header
@@ -19,15 +20,14 @@
 
     <!-- Logo -->
     <a href="/" class="flex items-center gap-3 group" aria-label="Your Daily Wisdom">
-      <img
-        src="/images/owl-logo.svg"
-        alt="Your Daily Wisdom owl logo"
-        class="w-9 h-9 drop-shadow-[0_2px_6px_rgba(201,160,89,.45)]"
+      <Image
+        src={goldOwl}
+        alt="Your Daily Wisdom"
+        class="h-10 w-auto drop-shadow-[0_2px_6px_rgba(197,160,89,.45)]"
+        loading="eager"
+        quality={90}
       />
-      <span
-        style="font-family: var(--font-display);"
-        class="text-lg font-semibold text-white tracking-tight leading-none hidden sm:block"
-      >
+      <span class="text-lg font-bold tracking-tight text-white leading-none hidden sm:block">
         Your Daily Wisdom
       </span>
     </a>
