@@ -1,0 +1,94 @@
+---
+// HowItWorks — dark section, 3 steps
+
+const steps = [
+  {
+    number: "01",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/>`,
+    title: "Write Your Wisdom",
+    body: "Enter your most important personal reminders in your own words — the values, insights, and hard-won truths you've earned. Organize them by life category.",
+  },
+  {
+    number: "02",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/>`,
+    title: "We Deliver Every Morning",
+    body: "Every morning, before the noise of the day begins, a push notification delivers your reminders — read aloud in a premium, warm, human-quality voice. Zero willpower required.",
+  },
+  {
+    number: "03",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>`,
+    title: "Live Your Values",
+    body: "Your self-growth practice compounds — each day building on the last. The people you love will feel the difference, not because you told them, but because they experience it.",
+  },
+];
+---
+
+<section class="bg-neutral-900 bg-dot-grid py-24 lg:py-32 relative overflow-hidden" id="how-it-works">
+
+  <!-- Ambient glow -->
+  <div aria-hidden="true" class="pointer-events-none absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-gold-900/30 blur-[140px]"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+
+    <!-- Label -->
+    <div class="text-center mb-4">
+      <span class="text-gold-550 text-xs font-bold uppercase tracking-widest">Simple by Design</span>
+    </div>
+
+    <!-- Heading -->
+    <div class="max-w-2xl mx-auto text-center mb-16">
+      <h2
+        style="font-family: var(--font-display); line-height: 1.1; letter-spacing: -0.02em;"
+        class="text-4xl sm:text-5xl font-bold text-white"
+      >
+        How It Works
+      </h2>
+      <p class="mt-5 text-neutral-500 text-lg leading-relaxed">
+        Three steps. One daily habit. A lifetime of compounding growth.
+      </p>
+    </div>
+
+    <!-- Steps grid -->
+    <div class="grid md:grid-cols-3 gap-px bg-neutral-700/50 rounded-3xl overflow-hidden shadow-[0_0_0_1px_rgba(61,59,54,.5)]">
+      {steps.map((step, i) => (
+        <div
+          x-data="{ visible: false }"
+          x-intersect.once="visible = true"
+          :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+          style={`transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); transition-delay: ${i * 130}ms;`}
+          class="bg-neutral-900 p-8 lg:p-10 flex flex-col gap-5"
+        >
+          <!-- Step number (ghost) -->
+          <span
+            style="font-family: var(--font-display);"
+            class="text-[5rem] font-bold text-neutral-800 leading-none select-none -mt-2"
+          >
+            {step.number}
+          </span>
+
+          <!-- Icon -->
+          <div class="w-12 h-12 rounded-xl bg-gold-900/50 border border-gold-700/40 flex items-center justify-center -mt-6">
+            <svg class="w-5 h-5 text-gold-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" set:html={step.icon}/>
+          </div>
+
+          <!-- Content -->
+          <div>
+            <h3 style="font-family: var(--font-display);" class="text-xl font-semibold text-white mb-3">{step.title}</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed">{step.body}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Connector line (desktop) -->
+    <div class="hidden md:flex items-center justify-center gap-0 mt-8 px-[16.67%]" aria-hidden="true">
+      {[0,1].map(() => (
+        <div class="flex-1 flex items-center gap-2">
+          <div class="flex-1 h-px bg-gradient-to-r from-neutral-700 to-gold-900/50"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-gold-700"></div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,183 @@
+---
+// Hero — full-viewport, near-black with dot-grid
+---
+
+<section class="relative min-h-screen bg-neutral-900 bg-dot-grid flex flex-col overflow-hidden">
+
+  <!-- Ambient glows -->
+  <div aria-hidden="true" class="pointer-events-none absolute -top-48 -left-48 w-[500px] h-[500px] rounded-full bg-gold-900/40 blur-[140px]"></div>
+  <div aria-hidden="true" class="pointer-events-none absolute top-1/2 -right-32 w-[400px] h-[400px] rounded-full bg-gold-900/25 blur-[120px]"></div>
+
+  <div class="relative flex-1 max-w-7xl mx-auto w-full px-6 pt-32 pb-16 flex flex-col lg:flex-row items-center gap-16 lg:gap-10">
+
+    <!-- ── Left: Copy ── -->
+    <div class="flex-1 text-center lg:text-left max-w-xl mx-auto lg:mx-0">
+
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-gold-900/60 border border-gold-700/40 text-gold-300 text-[11px] font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"></span>
+        Your Morning Practice
+      </div>
+
+      <!-- Headline -->
+      <h1 class="mb-6" style="font-family: var(--font-display); line-height: 1.06; letter-spacing: -0.02em;">
+        <span class="block text-[2.85rem] sm:text-[3.75rem] lg:text-[4.25rem] font-bold text-white">
+          You Already Have
+        </span>
+        <span class="block text-[2.85rem] sm:text-[3.75rem] lg:text-[4.25rem] font-bold text-white">
+          The Wisdom To
+        </span>
+        <em class="block text-[2.85rem] sm:text-[3.75rem] lg:text-[4.25rem] font-bold not-italic"
+            style="color: #C5A059;">
+          Change Your Life.
+        </em>
+      </h1>
+
+      <!-- Sub -->
+      <p class="text-neutral-500 text-lg sm:text-xl leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0">
+        Your Daily Wisdom delivers your own hard-earned insights back to you every
+        morning&thinsp;—&thinsp;in a warm, human voice&thinsp;—&thinsp;before the day has a chance to
+        pull you away from who you're working to become.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+        <a
+          href="#download"
+          class="inline-flex items-center justify-center gap-2.5 bg-gold-550 hover:bg-gold-500 active:scale-[.97] text-neutral-900 font-semibold text-base px-8 py-4 rounded-2xl transition-all duration-200 shadow-[0_4px_24px_rgba(176,140,68,.45)] w-full sm:w-auto"
+        >
+          <!-- Apple -->
+          <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          Download Free on iOS
+        </a>
+        <a
+          href="#how-it-works"
+          class="inline-flex items-center justify-center gap-2.5 border border-neutral-700 hover:border-neutral-500 text-neutral-300 hover:text-white font-medium text-base px-8 py-4 rounded-2xl transition-all duration-200 w-full sm:w-auto"
+        >
+          See How It Works
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Trust signals -->
+      <div class="flex flex-wrap items-center justify-center lg:justify-start gap-5 text-sm text-neutral-600">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          4.9 App Store
+        </span>
+        <span class="w-px h-4 bg-neutral-700"></span>
+        <span>Free forever</span>
+        <span class="w-px h-4 bg-neutral-700"></span>
+        <span>No credit card</span>
+      </div>
+    </div>
+
+    <!-- ── Right: Phone Mockup ── -->
+    <div class="flex-shrink-0 relative w-full max-w-[270px] mx-auto lg:mx-0 xl:max-w-[290px]">
+      <!-- Phone shell -->
+      <div
+        class="relative rounded-[44px] bg-neutral-800 border-2 border-neutral-700/70 overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,.7),inset_0_1px_0_rgba(255,255,255,.06)]"
+        style="aspect-ratio:9/19.5;"
+      >
+        <!-- Status bar -->
+        <div class="flex items-center justify-between px-7 pt-5 pb-1 bg-neutral-800">
+          <span class="text-neutral-500 text-[10px] font-medium">9:41</span>
+          <div class="w-20 h-[18px] rounded-full bg-neutral-900/80 flex items-center justify-center">
+            <div class="w-1.5 h-1.5 rounded-full bg-neutral-600"></div>
+          </div>
+          <div class="flex items-center gap-1">
+            <div class="w-[15px] h-[9px] rounded-[2px] border border-neutral-600 relative">
+              <div class="absolute inset-[1.5px] right-auto w-[55%] rounded-[1px] bg-gold-550"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Screen gradient background -->
+        <div class="absolute inset-0 top-[38px] bg-gradient-to-b from-neutral-900 via-neutral-900 to-[#0d0d0b] pointer-events-none"></div>
+
+        <!-- App UI -->
+        <div class="relative px-5 pt-4 pb-6 flex flex-col gap-4">
+          <!-- App bar -->
+          <div class="flex items-center gap-2">
+            <img src="/images/owl-logo.svg" class="w-6 h-6" alt="" aria-hidden="true"/>
+            <span class="text-neutral-500 text-[10px] font-medium tracking-wide">YOUR DAILY WISDOM</span>
+          </div>
+
+          <!-- Greeting -->
+          <div>
+            <p class="text-neutral-600 text-[9.5px] uppercase tracking-widest font-semibold mb-0.5">Good Morning, Michael</p>
+            <p class="text-neutral-300 text-[11px] font-medium">Tuesday • April 14</p>
+          </div>
+
+          <!-- Wisdom card -->
+          <div class="rounded-2xl bg-neutral-800 border border-neutral-700/60 p-4 flex flex-col gap-3">
+            <!-- Category -->
+            <div class="inline-flex self-start items-center gap-1.5 bg-gold-900/50 text-gold-300 text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border border-gold-700/30">
+              <div class="w-1 h-1 rounded-full bg-gold-500"></div>
+              Relationships
+            </div>
+
+            <!-- Quote -->
+            <p class="text-neutral-300 text-[11px] leading-relaxed font-light italic flex-1">
+              "When I feel reactive with the people I love, I pause. My response matters more than being right."
+            </p>
+
+            <!-- Audio controls -->
+            <div class="space-y-1.5">
+              <div class="h-[3px] rounded-full bg-neutral-700 overflow-hidden">
+                <div class="h-full w-[62%] rounded-full bg-gold-550"></div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-neutral-600 text-[9px]">0:23</span>
+                <button class="w-7 h-7 rounded-full bg-gold-900/60 border border-gold-700/40 flex items-center justify-center">
+                  <svg class="w-3 h-3 text-gold-500 ml-[1px]" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <span class="text-neutral-600 text-[9px]">0:38</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation dots -->
+          <div class="flex justify-center gap-1.5 pt-1">
+            <div class="w-4 h-[3px] rounded-full bg-gold-550"></div>
+            <div class="w-2 h-[3px] rounded-full bg-neutral-700"></div>
+            <div class="w-2 h-[3px] rounded-full bg-neutral-700"></div>
+            <div class="w-2 h-[3px] rounded-full bg-neutral-700"></div>
+          </div>
+
+          <!-- Bottom hint -->
+          <p class="text-center text-neutral-600 text-[9px] tracking-wide uppercase">Swipe to next reminder</p>
+        </div>
+      </div>
+
+      <!-- Floating notification (desktop only) -->
+      <div class="absolute -right-10 top-[22%] w-56 bg-neutral-800/90 backdrop-blur-xl border border-neutral-700/60 rounded-2xl px-4 py-3 shadow-elevated hidden xl:flex items-start gap-3">
+        <div class="w-8 h-8 rounded-xl bg-gold-900/60 border border-gold-700/40 flex items-center justify-center shrink-0">
+          <svg class="w-4 h-4 text-gold-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/>
+          </svg>
+        </div>
+        <div>
+          <p class="text-neutral-200 text-[11px] font-semibold mb-0.5">Morning Wisdom</p>
+          <p class="text-neutral-500 text-[10px] leading-relaxed">Your daily reminder is ready. Tap to listen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="relative flex justify-center pb-8">
+    <div class="flex flex-col items-center gap-1.5 text-neutral-700">
+      <span class="text-[10px] tracking-widest uppercase font-medium">Scroll</span>
+      <svg class="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </div>
+</section>

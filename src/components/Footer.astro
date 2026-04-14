@@ -1,0 +1,54 @@
+---
+// Footer — dark, minimal
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-neutral-800 border-t border-neutral-700/50 py-14">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Top row -->
+    <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-10 mb-12">
+
+      <!-- Brand -->
+      <div class="text-center md:text-left">
+        <a href="/" class="inline-flex items-center gap-3 mb-4">
+          <img src="/images/owl-logo.svg" alt="Your Daily Wisdom" class="w-9 h-9"/>
+          <span
+            style="font-family: var(--font-display);"
+            class="text-lg font-semibold text-white"
+          >
+            Your Daily Wisdom
+          </span>
+        </a>
+        <p class="text-neutral-600 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
+          Hear your own wisdom, every morning, before the day begins.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-3 text-sm">
+        {[
+          { href: '#how-it-works', label: 'How It Works' },
+          { href: '#features',     label: 'Features' },
+          { href: '#pricing',      label: 'Pricing' },
+          { href: '#download',     label: 'Download' },
+        ].map(({ href, label }) => (
+          <a href={href} class="text-neutral-500 hover:text-neutral-300 transition-colors duration-200">
+            {label}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-neutral-700/50 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-600">
+      <p>© {currentYear} Your Daily Wisdom. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-neutral-400 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-neutral-400 transition-colors">Terms of Service</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
