@@ -35,9 +35,9 @@ import goldOwl from '../assets/images/Gold-Owl.png';
     <!-- Desktop nav -->
     <nav class="hidden md:flex items-center gap-8" aria-label="Primary">
       {[
-        { href: '#how-it-works', label: 'How It Works' },
-        { href: '#features',     label: 'Features' },
-        { href: '#pricing',      label: 'Pricing' },
+        { href: '/#how-it-works', label: 'How It Works' },
+        { href: '/#features',     label: 'Features' },
+        { href: '/#pricing',      label: 'Pricing' },
       ].map(({ href, label }) => (
         <a
           href={href}
@@ -51,7 +51,7 @@ import goldOwl from '../assets/images/Gold-Owl.png';
     <!-- Right: CTA + Hamburger -->
     <div class="flex items-center gap-3">
       <a
-        href="#download"
+        href="/#download"
         class="hidden md:inline-flex items-center gap-2 bg-gold-550 hover:bg-gold-500 active:scale-[.97] text-neutral-900 font-semibold text-sm px-5 py-2.5 rounded-xl transition-all duration-200 shadow-[0_2px_12px_rgba(176,140,68,.4)]"
       >
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -88,9 +88,9 @@ import goldOwl from '../assets/images/Gold-Owl.png';
     class="md:hidden bg-[#1F1E1B]/98 backdrop-blur-md border-t border-neutral-700/50 px-6 pb-6 pt-3 space-y-1"
   >
     {[
-      { href: '#how-it-works', label: 'How It Works' },
-      { href: '#features',     label: 'Features' },
-      { href: '#pricing',      label: 'Pricing' },
+      { href: '/#how-it-works', label: 'How It Works' },
+      { href: '/#features',     label: 'Features' },
+      { href: '/#pricing',      label: 'Pricing' },
     ].map(({ href, label }) => (
       <a
         href={href}
@@ -102,7 +102,7 @@ import goldOwl from '../assets/images/Gold-Owl.png';
     ))}
     <div class="pt-4">
       <a
-        href="#download"
+        href="/#download"
         @click="open=false"
         class="flex items-center justify-center gap-2 bg-gold-550 text-neutral-900 font-semibold text-sm py-3.5 rounded-xl"
       >

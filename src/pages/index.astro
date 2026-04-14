@@ -1,6 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Nav from '../components/Nav.astro';
+import PageLayout from '../layouts/PageLayout.astro';
 import Hero from '../components/Hero.astro';
 import ProofBar from '../components/ProofBar.astro';
 import ProblemSection from '../components/ProblemSection.astro';
@@ -9,14 +8,12 @@ import Features from '../components/Features.astro';
 import Pricing from '../components/Pricing.astro';
 import Testimonials from '../components/Testimonials.astro';
 import FinalCTA from '../components/FinalCTA.astro';
-import Footer from '../components/Footer.astro';
 ---
 
-<Layout
+<PageLayout
   title="Your Daily Wisdom — Live Your Values, Every Morning"
   description="The app that delivers your own hard-earned wisdom back to you every morning — in your words, in a warm human voice, before the day begins. Close the gap between knowing and living."
 >
-  <Nav />
   <main>
     <Hero />
     <ProofBar />
@@ -27,5 +24,4 @@ import Footer from '../components/Footer.astro';
     <Testimonials />
     <FinalCTA />
   </main>
-  <Footer />
-</Layout>
+</PageLayout>
