@@ -36,7 +36,7 @@ const steps = [
     </div>
 
     <!-- Heading -->
-    <div class="max-w-2xl mx-auto text-center mb-16">
+    <div class="max-w-2xl mx-auto text-center mb-8">
       <h2
         style="line-height: 1.1; letter-spacing: -0.02em;"
         class="text-4xl sm:text-5xl font-bold text-white"
@@ -48,6 +48,16 @@ const steps = [
       </p>
     </div>
 
+    <!-- Connector line (desktop) -->
+    <div class="hidden md:flex items-center justify-center gap-0 my-8 px-[16.67%]" aria-hidden="true">
+      {[0,1].map(() => (
+          <div class="flex-1 flex items-center gap-2">
+            <div class="flex-1 h-px bg-gradient-to-r from-neutral-700 to-gold-900/50"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-gold-700"></div>
+          </div>
+      ))}
+    </div>
+
     <!-- Steps grid -->
     <div class="grid md:grid-cols-3 gap-px bg-neutral-700/50 rounded-3xl overflow-hidden shadow-[0_0_0_1px_rgba(61,59,54,.5)]">
       {steps.map((step, i) => (
@@ -56,13 +66,10 @@ const steps = [
           x-intersect.once="visible = true"
           :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
           style={`transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); transition-delay: ${i * 130}ms;`}
-          class="bg-neutral-900 p-8 lg:p-10 flex flex-col gap-5"
+          class="group bg-neutral-900 p-8 lg:p-10 flex flex-col gap-5"
         >
           <!-- Step number (ghost) -->
-          <span
-           
-            class="text-[5rem] font-bold text-neutral-800 leading-none select-none -mt-2"
-          >
+          <span class="text-[5rem] font-bold text-neutral-800 leading-none select-none -mt-2 transition-all duration-500 group-hover:text-gold-300">
             {step.number}
           </span>
 
@@ -76,16 +83,6 @@ const steps = [
             <h3 class="text-xl font-semibold text-white mb-3">{step.title}</h3>
             <p class="text-neutral-500 text-sm">{step.body}</p>
           </div>
-        </div>
-      ))}
-    </div>
-
-    <!-- Connector line (desktop) -->
-    <div class="hidden md:flex items-center justify-center gap-0 mt-8 px-[16.67%]" aria-hidden="true">
-      {[0,1].map(() => (
-        <div class="flex-1 flex items-center gap-2">
-          <div class="flex-1 h-px bg-gradient-to-r from-neutral-700 to-gold-900/50"></div>
-          <div class="w-1.5 h-1.5 rounded-full bg-gold-700"></div>
         </div>
       ))}
     </div>
